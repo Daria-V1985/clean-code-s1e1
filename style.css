@@ -3,42 +3,45 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
+h3 {
+    list-style:none;
 }
-.aaa {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    text-align: right;
-}
-.aaa img {
-    width: 100%;
-}
-.aaa .more-inf {
-    font-family: fantasy, cursive;
-}
-.centered-main-page-element {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
-}
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1;
-}
-.task-row-wrapper {
-    display: flex;
-}
-li, h3 {
+ul li {
     list-style:none;
 }
 input, 
 button {
     outline:none;
+}
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Lato, sans-serif;
+}
+.todo-list {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+}
+.todo-list__img {
+    width: 100%;
+}
+.todo-list__link {
+    font-family: fantasy, cursive;
+}
+.todo-list__add-item {
+    display: block;
+    width: 500px;
+    margin: 0 auto 0;
+}
+.todo-list__task {
+    width: 56%;
+    display: inline-block;
+    flex-grow: 1;
+}
+.add-item__wrapper {
+    display: flex;
 }
 button {
     background: none;
@@ -101,10 +104,6 @@ li {
     justify-content: space-between;
     align-items: center;
 }
-li > * {
-    vertical-align: middle;
-}
-
 li > input[type="checkbox"] {
     margin: 0 10px;
 }
@@ -138,17 +137,18 @@ ul#completed-tasks label {
 ul li input[type="text"] {
     display:none
 }
-ul li.editMode input[type="text"] {
+ul li.edit-mode input[type="text"] {
     display:inline-block;
     width:224px
 }
-ul li.editMode label {
+ul li.edit-mode label {
     display:none;
 }
 
 /* Media */
 
 @media (max-width:768px) {
-    .aaa { text-align: center;
+    .todo-list { 
+        text-align: center;
     }
 }
